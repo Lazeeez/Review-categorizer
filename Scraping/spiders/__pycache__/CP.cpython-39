@@ -1,0 +1,11 @@
+a
+
+    $_  ã                   @   s   d dl Z G dd„ de jƒZdS )é    Nc                   @   sH   e Zd ZdZdgZdZg ZeddƒD ]Ze 	ee
+eƒ ¡ q$dd„ ZdS )	ÚAmazonReviewSpiderZ
+amazon_reviewzhttps://www.amazon.in/z8Put the link of the page you want to scrape &pageNumber=é   é   c              	   c   sl   |  d¡}|  d¡}|  d¡}d}|D ]@}ddd | d¡ ¡ ¡d ||  d¡ ¡ ¡d	œV  |d
+ }q&d S )Nz#cm_cr-review_listz.review-ratingz.review-textr   z#Put the Brand Name you are scrapingz9Put the Name of the mobile whose reviews you are scrapingÚ z	.//text())ZBrandZModelZstarsÚcommentr   )ÚcssÚjoinÚxpathÚextract)ÚselfÚresponseÚdataZstar_ratingÚcommentsÚcountZreview© r   ú'C:\Windows\system32\CP\CP\spiders\CP.pyÚparse   s    
+
+
+ýzAmazonReviewSpider.parseN)Ú__name__Ú
+__module__Ú__qualname__ÚnameÚallowed_domainsZ	myBaseUrlÚ
+start_urlsÚrangeÚiÚappendÚstrr   r   r   r   r   r      s   r   )ÚscrapyÚSpiderr   r   r   r   r   Ú<module>   s   
